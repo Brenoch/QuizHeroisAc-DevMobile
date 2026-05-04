@@ -18,9 +18,9 @@ class ResultadoActivity : AppCompatActivity() {
         var aranha = 0
         var capitao = 0
 
-        if (resposta1 == "Noite e misterio") {
+        if (resposta1 == "Cidade a noite") {
             batman++
-        } else if (resposta1 == "Cidade e diversao") {
+        } else if (resposta1 == "Bairro movimentado") {
             aranha++
         } else {
             capitao++
@@ -42,21 +42,21 @@ class ResultadoActivity : AppCompatActivity() {
             capitao++
         }
 
-        var heroi = "Batman"
+        var heroi = "🦇 Batman"
         if (aranha >= batman && aranha >= capitao) {
-            heroi = "Homem-Aranha"
+            heroi = "🕷️ Homem-Aranha"
         }
         if (capitao > batman && capitao > aranha) {
-            heroi = "Capitao America"
+            heroi = "🛡️ Capitão América"
         }
 
         val texto = findViewById<TextView>(R.id.txtResultado)
         val imagem = findViewById<ImageView>(R.id.imgHeroi)
         texto.text = "Seu super heroi favorito e: $heroi"
 
-        if (heroi == "Batman") {
+        if (heroi == "🦇 Batman") {
             imagem.setImageResource(R.drawable.batman)
-        } else if (heroi == "Homem-Aranha") {
+        } else if (heroi == "🕷️ Homem-Aranha") {
             imagem.setImageResource(R.drawable.aranha)
         } else {
             imagem.setImageResource(R.drawable.capitao)
